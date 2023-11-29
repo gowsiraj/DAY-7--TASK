@@ -21,11 +21,11 @@ request.send();
 request.onload = function () {
     var result = JSON.parse(request.response);
     
-    var asiaCountries = result.filter((element) => element.region === 'Asia');
+    var asiaCountries = result.filter((ele) => ele.region === 'Asia');
+    console.log(asiaCountries);
 
-     asiaCountries.forEach((country) => {
-        console.log(country.name.common);
-    });
+    var asiaCoun=asiaCountries.map((elem)=>elem.continents);
+    console.log(asiaCoun);
 }
 
 
