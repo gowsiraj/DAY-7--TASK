@@ -12,11 +12,8 @@ request.onload = function () {
     var countriesWithLowPopulation = result.filter((element) => 
         element.population && element.population < 200000
     );
+    console.log(countriesWithLowPopulation);
 
-    // Log the names of countries with low population
-    countriesWithLowPopulation.forEach((country) => {
-        console.log(country.name.common);
-    });
+var lowPopulation =countriesWithLowPopulation.map((elem) =>(elem.name.common));
+ console.log(lowPopulation)  ;
 }
-
-
